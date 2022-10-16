@@ -16,7 +16,15 @@ function animatePress(currentColour) {
   }, 100);
 }
 
+function gameOver() {
+
+}
+
 function nextSequence() {
+  //clears user's history of clicks
+  userClickedPattern = [];
+
+  //increases level when called
   level++;
   $("h1").text("Level " + level);
 
@@ -29,6 +37,16 @@ function nextSequence() {
 
   //plays the randomly picked button's audio
   playSound(randomChosenColour);
+}
+
+function checkAnswer(currentLevel) {
+  if (gamePattern[currentLevel] === userClickedPattern[currentLevel]) {
+    if (userClickedPattern.length === gamePattern.length) {
+      setTimeout(nextSequence, 1000);
+    }
+  } else {
+    gameOver();
+  }
 }
 
 $(document).keypress(function() {
@@ -44,4 +62,5 @@ $(".btn").click(function() {
   userClickedPattern.push(userChosenColour);
   playSound(userChosenColour);
   animatePress(userChosenColour);
+  checkAnswer(userClickedPattern[userClickedPattern.length - 1]);
 });
