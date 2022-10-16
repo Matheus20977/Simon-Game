@@ -16,6 +16,12 @@ function animatePress(currentColour) {
   }, 100);
 }
 
+function startOver() {
+  level = 0;
+  gamePattern = [];
+  gameHasStarted = 0;
+}
+
 function gameOver() {
   $("h1").text("Game Over, Press Any Key to Restart");
 
@@ -25,6 +31,8 @@ function gameOver() {
   setTimeout(function() {
     $("body").removeClass("game-over");
   }, 200);
+
+  startOver();
 }
 
 function nextSequence() {
@@ -48,16 +56,12 @@ function nextSequence() {
 
 function checkAnswer(currentLevel) {
   if (gamePattern[currentLevel] === userClickedPattern[currentLevel]) {
-    console.log("success");
-
     if (userClickedPattern.length === gamePattern.length) {
       setTimeout(function() {
         nextSequence();
       }, 1000);
     }
   } else {
-    console.log("wrong");
-
     gameOver();
   }
 }
