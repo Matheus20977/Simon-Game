@@ -1,10 +1,13 @@
-<h1>Simon Game</h1>
-<h3>Desafio do curso <a href="https://www.udemy.com/course/the-complete-web-development-bootcamp/">The Complete 2022 Web Development Bootcamp</a></h2>
-<p><strong>Como funciona:</strong></p>
+# Simon Game
+
+<h3>How it works</h3>
 <ul>
-  <li>Você deve apertar os botões na ordem em que aparecem, começando sempre do primeiro a cada novo botão indicado</li>
-  <li>A cada acerto a sequência é aumentada em 1 botão, acumulando de acordo com o level</li>
-  <li>Se você errar a sequência, o jogo irá recomeçar do zero</li>
+  <li>You must press the buttons in the order it appears, always starting from the first to each new button indicated</li>
+  <li>With each hit, the sequence is increased by 1 button, accumulating according to level</li>
+  <li>If you miss the sequence, the game will restart from the beggining.</li>
 <ul>
+<br>
+<p>Click on the link below to access the running website:</p>
+<p>https://matheus20977.github.io/Simon-Game/</p>
 
 
