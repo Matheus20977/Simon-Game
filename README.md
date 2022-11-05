@@ -7,7 +7,5 @@
   <li>If you miss the sequence, the game will restart from the beggining.</li>
 <ul>
 <br>
-<p>Click on the link below to access the running website:</p>
-<p>https://matheus20977.github.io/Simon-Game/</p>
 
 
